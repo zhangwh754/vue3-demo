@@ -15,6 +15,7 @@ const titles = reactive([
   '过渡列表2',
   '依赖注入',
   '兄弟传参&事件总线',
+  'Mitt事件总线库'
 ])
 </script>
 

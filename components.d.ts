@@ -21,6 +21,8 @@ declare module '@vue/runtime-core' {
     ElRadio: typeof import('element-plus/es')['ElRadio']
     ElRadioGroup: typeof import('element-plus/es')['ElRadioGroup']
     Inject: typeof import('./src/components/Inject.vue')['default']
+    MittA: typeof import('./src/components/Mitt/MittA.vue')['default']
+    MittB: typeof import('./src/components/Mitt/MittB.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Teleport: typeof import('./src/components/Teleport.vue')['default']

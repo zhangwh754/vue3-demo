@@ -6,7 +6,7 @@ const num = ref(0)
 
 const btnClick = () => {
   num.value = Math.floor(Math.random() * 100)
-  Bus.emit('click', num)
+  Bus.emit('click', num.value)
 }
 </script>
 
