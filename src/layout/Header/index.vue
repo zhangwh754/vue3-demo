@@ -12,7 +12,9 @@ const titles = reactive([
   '传送门',
   'transition',
   '过渡列表1',
-  '过渡列表2'
+  '过渡列表2',
+  '依赖注入',
+  '兄弟传参&事件总线',
 ])
 </script>
 
