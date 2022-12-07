@@ -3,7 +3,17 @@ import { reactive } from 'vue'
 import { RouterLink } from 'vue-router'
 import { autoRoutes } from '@/utils/routes'
 
-const titles = reactive(['Test', '瀑布流', '树-递归', '动态组件', '异步组件', '传送门', 'transition'])
+const titles = reactive([
+  'Test',
+  '瀑布流',
+  '树-递归',
+  '动态组件',
+  '异步组件',
+  '传送门',
+  'transition',
+  '过渡列表1',
+  '过渡列表2'
+])
 </script>
 
 <template>
