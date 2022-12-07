@@ -11,6 +11,7 @@ import { RouterView } from 'vue-router'
 <style scoped lang="scss">
 .content {
   padding-top: 10px;
+  padding-left: 50px;
   flex: 1;
   overflow: auto;
   @include scrollbar;
