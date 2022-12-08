@@ -22,6 +22,8 @@ const titles = reactive([
   '全局变量|函数',
   '全局插件',
   '动态Css和插槽类',
+  'tailwindCss',
+  'pxConvert'
 ])
 </script>
 

@@ -4,6 +4,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
+import pxToViewPort from 'postcss-px-to-viewport'
+
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
@@ -47,7 +49,15 @@ export default defineConfig(({ command }) => {
         scss: {
           additionalData: `@use "@/assets/style/mixin.scss" as *;`
         }
-      }
+      },
+      // postcss: {
+      //   plugins: [
+      //     pxToViewPort({
+      //       unitToConvert: 'px', // 要转化的单位
+      //       viewportWidth: 320 // UI设计稿的宽度
+      //     })
+      //   ]
+      // }
     },
     server: {
       open: true
