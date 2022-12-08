@@ -19,6 +19,7 @@ const titles = reactive([
   '自定义指令',
   '自定义拖拽',
   '封装hook',
+  '全局变量|函数'
 ])
 </script>
 
