@@ -6,6 +6,8 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // import pxToViewPort from 'postcss-px-to-viewport'
 
+import unocss from 'unocss/vite'
+
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
@@ -37,6 +39,16 @@ export default defineConfig(({ command }) => {
         mockPath: './src/mock',
         supportTs: true, // 打开后，可以读取 ts 文件模块。 请注意，打开后将无法监视.js 文件。
         watchFiles: false // 监视文件更改
+      }),
+      unocss({
+        rules: [
+          ['flex', { display: 'flex' }],
+          ['pink', { color: 'pink' }],
+          [/^fz-(\d+)$/, ([, d]) => ({ 'font-size': `${Number(d)}px` })]
+        ],
+        shortcuts: {
+          combine: 'flex pink'
+        }
       })
     ],
     resolve: {
@@ -49,7 +61,7 @@ export default defineConfig(({ command }) => {
         scss: {
           additionalData: `@use "@/assets/style/mixin.scss" as *;`
         }
-      },
+      }
       // postcss: {
       //   plugins: [
       //     pxToViewPort({
