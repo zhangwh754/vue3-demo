@@ -17,7 +17,8 @@ const titles = reactive([
   '兄弟传参&事件总线',
   'Mitt事件总线库',
   '自定义指令',
-  '自定义拖拽'
+  '自定义拖拽',
+  '封装hook',
 ])
 </script>
 
