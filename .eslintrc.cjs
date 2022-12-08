@@ -9,6 +9,7 @@ module.exports = {
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier'
   ],
+  extends: ['./.eslintrc-auto-import.json'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module'
@@ -16,5 +17,7 @@ module.exports = {
   rules: {
     'vue/multi-word-component-names': 'off'
   },
-  extends: ['./.eslintrc-auto-import.json']
+  globals: {
+    var1: 'global'
+  }
 }
