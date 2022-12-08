@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
-import pxToViewPort from 'postcss-px-to-viewport'
+// import pxToViewPort from 'postcss-px-to-viewport'
 
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -36,7 +36,7 @@ export default defineConfig(({ command }) => {
       viteMockServe({
         mockPath: './src/mock',
         supportTs: true, // 打开后，可以读取 ts 文件模块。 请注意，打开后将无法监视.js 文件。
-        watchFiles: true // 监视文件更改
+        watchFiles: false // 监视文件更改
       })
     ],
     resolve: {
