@@ -20,7 +20,8 @@ const titles = reactive([
   '自定义拖拽',
   '封装hook',
   '全局变量|函数',
-  '全局插件'
+  '全局插件',
+  '动态Css和插槽类',
 ])
 </script>
 

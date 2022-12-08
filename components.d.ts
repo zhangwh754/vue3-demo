@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     BusA: typeof import('./src/components/Bus/BusA.vue')['default']
     BusB: typeof import('./src/components/Bus/BusB.vue')['default']
     C: typeof import('./src/components/dynamicCom/C.vue')['default']
+    CssStyle: typeof import('./src/components/CssStyle.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCheckbox: typeof import('element-plus/es')['ElCheckbox']
     ElIcon: typeof import('element-plus/es')['ElIcon']
