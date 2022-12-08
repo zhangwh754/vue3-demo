@@ -8,25 +8,10 @@ import './assets/style/style.scss'
 
 const app = createApp(App)
 
-app.config.globalProperties.$label = 'zwh'
-app.config.globalProperties.$filter = {
-  format<T>(value: T) {
-    return `前缀-${value}`
-  }
-}
+import global from './utils/globalVars'
 
-type Filter = {
-  format<T>(value: T): string
-}
+import Loading from './plugins/Loading'
 
-declare module 'vue' {
-  export interface ComponentCustomProperties {
-    $label: string
-    $filter: Filter
-  }
-}
-
-app.use(createPinia())
-app.use(router)
+app.use(createPinia()).use(router).use(global).use(Loading)
 
 app.mount('#app')

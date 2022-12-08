@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 const app = getCurrentInstance()
 console.log(app?.proxy?.$label as string)
+
+console.log(app?.proxy?.$label2 as string)
+
 console.log(app?.proxy?.$filter.format('hello world') as string)
 </script>
 
