@@ -15,9 +15,9 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { viteMockServe } from 'vite-plugin-mock'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command }) => {
+export default defineConfig(({ mode }) => {
   return {
-    base: command === 'serve' ? '/' : './',
+    base: mode === 'development' ? '/' : './',
     plugins: [
       vue(),
       vueJsx(),
@@ -73,6 +73,16 @@ export default defineConfig(({ command }) => {
     },
     server: {
       open: true
+    },
+    build: {
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          /* 生产环境移除console.log */
+          drop_console: true,
+          drop_debugger: true
+        }
+      }
     }
   }
 })

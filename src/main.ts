@@ -14,6 +14,8 @@ import global from './utils/globalVars'
 
 import Loading from './plugins/Loading'
 
+console.log(import.meta.env.VITE_TITLE)
+
 app.use(createPinia()).use(router).use(global).use(Loading)
 
 app.mount('#app')
