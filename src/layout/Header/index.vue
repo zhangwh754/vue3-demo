@@ -25,7 +25,8 @@ const titles = reactive([
   'tailwindCss',
   'pxConvert',
   'CSS原子化',
-  '函数式编程'
+  '函数式编程',
+  'use pinia',
 ])
 </script>
 

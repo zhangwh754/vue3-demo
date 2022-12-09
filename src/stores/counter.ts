@@ -1,12 +1,39 @@
-import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
+import { Name } from './store-name'
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
+interface Data {
+  code: number
+  msg: string
+  data: number
+}
+
+export const useCounterStore = defineStore(Name.COUNTER, {
+  state: () => ({
+    count: 1,
+    name: 'zwh'
+  }),
+  getters: {
+    doubleCount(): number {
+      return this.count * 2
+    }
+  },
+  actions: {
+    increment() {
+      this.count++
+    },
+    asyncFn: async function () {
+      const p1: Promise<Data> = new Promise(resolve => {
+        setTimeout(() => {
+          const data: Data = {
+            code: 200,
+            msg: 'ok',
+            data: Math.floor(Math.random() * 100)
+          }
+          resolve(data)
+        }, 3000)
+      })
+      const res = await p1
+      this.count = res.data
+    }
   }
-
-  return { count, doubleCount, increment }
 })
