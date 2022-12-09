@@ -7,6 +7,7 @@
     "playwright.config.*",
     "./postcss-px-to-viewport.d.ts"
   ],
+  "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     "composite": true,
     "types": ["node"]

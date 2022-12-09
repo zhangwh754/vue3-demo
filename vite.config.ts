@@ -8,6 +8,8 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 import unocss from 'unocss/vite'
 
+import { visualizer } from 'rollup-plugin-visualizer'
+
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
@@ -49,6 +51,9 @@ export default defineConfig(({ mode }) => {
         shortcuts: {
           combine: 'flex pink'
         }
+      }),
+      visualizer({
+        open: true
       })
     ],
     resolve: {
@@ -82,7 +87,10 @@ export default defineConfig(({ mode }) => {
           drop_console: true,
           drop_debugger: true
         }
-      }
+      },
+      cssCodeSplit: true, //css 拆分
+      sourcemap: false, //不生成sourcemap
+      assetsInlineLimit: 5000 //小于该值 图片将打包成Base64
     }
   }
 })

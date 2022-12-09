@@ -7,7 +7,7 @@ const Btn = (props: Props, ctx: any) => {
   return h(
     'div',
     {
-      class: ['rounded', 'bg-green-500', 'h-20', 'text-4xl', 'text-gray-50', 'text-center', 'p-1.5'],
+      class: ['rounded', 'bg-green-500', 'h-20', 'leading-20', 'text-4xl', 'text-gray-50', 'text-center', 'p-1.5'],
       onClick: () => {
         ctx.emit('on-click', 'emit的数据')
       }
