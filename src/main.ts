@@ -1,5 +1,4 @@
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
@@ -8,14 +7,17 @@ import './assets/style/style.scss'
 
 import 'uno.css'
 
+import { setupStore } from '@/stores'
+
 const app = createApp(App)
 
 import global from './utils/globalVars'
 
 import Loading from './plugins/Loading'
 
-console.log(import.meta.env.VITE_TITLE)
+// 配置 store
+setupStore(app)
 
-app.use(createPinia()).use(router).use(global).use(Loading)
+app.use(router).use(global).use(Loading)
 
 app.mount('#app')

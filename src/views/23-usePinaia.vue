@@ -35,7 +35,6 @@ const edit = () => {
   <h2>{{ counterStore.count }}</h2>
   <h2>{{ counterStore.doubleCount }}</h2>
   <h2>{{ counterStore.name }}</h2>
-  <el-button @click="() => counterStore.$reset()">$reset</el-button>
   <hr />
   <el-button @click="counterStore.count++">1、直接修改数据</el-button>
   <el-button @click="dispatch1">2、dispatch对象方法</el-button>

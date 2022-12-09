@@ -27,6 +27,7 @@ const titles = reactive([
   'CSS原子化',
   '函数式编程',
   'use pinia',
+  'pinia api',
 ])
 </script>
 

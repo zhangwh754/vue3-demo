@@ -34,6 +34,9 @@ export const useCounterStore = defineStore(Name.COUNTER, {
       })
       const res = await p1
       this.count = res.data
+    },
+    error() {
+      throw new Error('这是个手动抛出的错误')
     }
   }
 })
