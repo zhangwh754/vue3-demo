@@ -28,6 +28,7 @@ const titles = reactive([
   '函数式编程',
   'use pinia',
   'pinia api',
+  'vue memo指令'
 ])
 </script>
 
